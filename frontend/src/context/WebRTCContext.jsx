@@ -96,7 +96,12 @@ export function WebRTCProvider({ children }) {
 
   // Initialize socket connection
   useEffect(() => {
-    const socketInstance = io(SIGNAL_SERVER_URL);
+    const socketInstance = io(SIGNAL_SERVER_URL, {
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: 10,
+      reconnectionDelay: 1000
+    });
     socketRef.current = socketInstance;
     setSocket(socketInstance);
 
