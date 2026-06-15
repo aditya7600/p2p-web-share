@@ -150,3 +150,131 @@ Navigate to [http://localhost:5173](http://localhost:5173) in your browser.
 ## License
 
 MIT License. Feel free to use and adapt this project for your needs!
+
+# Secure Browser-to-Browser File Sharing Platform
+
+A secure peer-to-peer file transfer application built using **React, Node.js, Socket.io, and WebRTC**. The system enables direct browser-to-browser file sharing with end-to-end encryption and integrity verification.
+
+---
+
+## Features
+
+* Browser-to-Browser file transfer using WebRTC
+* Socket.io based signaling server
+* AES-GCM end-to-end encryption
+* SHA-256 file integrity verification
+* Chunk-based file transfer (64 KB chunks)
+* Resume support after disconnection
+* Progress tracking
+* Transfer speed and ETA estimation
+* QR code room sharing
+* Transfer history
+* Dark mode UI
+* Error handling and reconnect support
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* Tailwind CSS
+* React Router
+
+### Backend
+
+* Node.js
+* Express.js
+* Socket.io
+
+### Security
+
+* Web Crypto API
+* AES-GCM Encryption
+* SHA-256 Hashing
+
+### Communication
+
+* WebRTC
+* Simple-Peer
+
+---
+
+## Architecture
+
+Sender Browser
+↓
+Socket.io Signaling Server
+↓
+Receiver Browser
+
+Peer-to-Peer WebRTC Data Channel
+
+---
+
+## Project Structure
+
+```
+P2P-WebShare
+│
+├── backend
+│   ├── server.js
+│   └── package.json
+│
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   └── utils
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## GitHub Repository
+
+https://github.com/aditya7600/p2p-web-share
+
+---
+
+## Backend Deployment
+
+https://p2p-web-share-backend-z370.onrender.com
+
+---
+
+## Future Improvements
+
+* TURN server support
+* Multiple file transfer
+* Drag and drop folders
+* File compression
+* Mobile optimization
+
+
+
