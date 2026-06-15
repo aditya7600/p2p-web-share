@@ -13,7 +13,7 @@ import {
 
 const WebRTCContext = createContext();
 
-const SIGNAL_SERVER_URL = 'http://localhost:5000';
+const SIGNAL_SERVER_URL = 'https://p2p-web-share-backend-z370.onrender.com';
 const CHUNK_SIZE = 64 * 1024; // 64KB chunks
 
 export function WebRTCProvider({ children }) {
